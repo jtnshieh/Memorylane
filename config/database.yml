@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: Instaclone_development
+  database: Memorylane_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Instaclone_test
+  database: Memorylane_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: Instaclone_production
-  username: Instaclone
-  password: <%= ENV['INSTACLONE_DATABASE_PASSWORD'] %>
+  database: Memorylane_production
+  username: Memorylane
+  password: <%= ENV['MEMORYLANE_DATABASE_PASSWORD'] %>
