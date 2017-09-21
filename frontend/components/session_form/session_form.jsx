@@ -11,21 +11,17 @@ class SessionForm extends React.Component {
       full_name: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-
-  }
-
-  componentDidMount() {
-    this.props.errors = [];
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
     if (newProps.loggedIn) {
       this.props.history.push('/');
     }
+  }
 
-    if (newProps.location.pathname !== this.props.location.pathname) {
-      this.props.errors = [];
-    }
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   update(field) {
@@ -40,11 +36,19 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
-  navLink() {
+  handleDemoLogin(e) {
+    e.preventDefault();
+    const user = {username:"Demo", password:"123456"};
+    this.props.login(user);
+  }
+
+  switchSession() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up instead!</Link>;
+      return (<div>Don't have an account?<Link to="/signup"> Sign up</Link>
+      </div>);
     } else {
-      return <Link to="/login">log in instead!</Link>;
+      return (<div>Have an account?<Link to="/login"> Log in</Link>
+      </div>);
     }
   }
 
@@ -83,6 +87,9 @@ class SessionForm extends React.Component {
               <h1 className = "homepage-logo">Memorylane</h1>
               <h4>Sign up to see photos and videos from your friends.</h4>
               <div className="login-form">
+                <button onClick={this.handleDemoLogin}>Demo Log In</button>
+                <br/>
+                <br/>
                 {name}
                 <br/>
                   <input type="text"
@@ -104,7 +111,7 @@ class SessionForm extends React.Component {
             </form>
           </div>
           <div className = "switch-session-container">
-            Please {this.props.formType} or {this.navLink()}
+            {this.switchSession()}
           </div>
         </div>
       </div>

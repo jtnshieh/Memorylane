@@ -9,7 +9,8 @@
 //dispatching action creators login or signup given formType
 import { connect } from 'react-redux';
 import SessionForm from './session_form';
-import { login, signup } from '../../actions/session_actions';
+import { login, signup, clearErrors } from '../../actions/session_actions';
+
 
 const mapStateToProps = (state) => {
   return {
@@ -25,7 +26,9 @@ const mapDispatchToProps = (dispatch, {location}) => {
   const processForm = (formType === 'login') ? login: signup;
   return {
     processForm: (user) => dispatch(processForm(user)),
-    formType
+    formType,
+    login: (user) => dispatch(login(user)),
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 
