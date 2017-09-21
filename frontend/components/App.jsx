@@ -6,12 +6,11 @@ import {Route} from 'react-router-dom';
 const App = () => (
   <div>
     <header>
-      <h1>Memorylane</h1>
       <GreetingContainer />
     </header>
 
     <br/>
-    
+
     <Route path="/login" component={SessionFormContainer} />
     <Route path="/signup" component={SessionFormContainer} />
   </div>

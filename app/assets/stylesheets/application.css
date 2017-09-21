@@ -16,11 +16,45 @@
 
 body {
   background-color: #f2f2f2;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .login-form-container {
   background-color: white;
-  width: 300px;
-  height: 200px;
+  width: 320px;
+  height: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+}
+
+.homepage-logo {
+  font-size: 45px;
+  font-family: 'Lobster Two', cursive;
+}
+
+.homepage-images {
+  margin-right: 10px;
+}
+
+.switch-session-container {
+  background-color: white;
+  width: 320px;
+  height: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
