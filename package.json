@@ -23,7 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:watch": "webpack -w"
+    "build:watch": "webpack -w",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
