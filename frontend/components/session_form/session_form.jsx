@@ -7,15 +7,24 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      full_name: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
+  componentDidMount() {
+    this.props.errors = [];
+  }
+
   componentWillReceiveProps(newProps) {
     if (newProps.loggedIn) {
       this.props.history.push('/');
+    }
+
+    if (newProps.location.pathname !== this.props.location.pathname) {
+      this.props.errors = [];
     }
   }
 
@@ -52,6 +61,17 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const name = this.props.formType === "login" ?
+      "" :
+      <input type="text"
+      value={this.state.full_name}
+      placeholder="Full Name"
+      onChange={this.update('full_name')}
+      className="login-input"
+      />;
+    const submitValue = this.props.formType === "login" ?
+      "Log in" : "Sign Up";
+
     return(
       <div className = "homepage">
         <div className = "homepage-images">
@@ -61,29 +81,26 @@ class SessionForm extends React.Component {
           <div className = "login-form-container">
             <form onSubmit = {this.handleSubmit} className='login-form-box'>
               <h1 className = "homepage-logo">Memorylane</h1>
-              <h3>Sign up to see photos and videos from your friends.</h3>
-              {this.renderErrors()}
+              <h4>Sign up to see photos and videos from your friends.</h4>
               <div className="login-form">
+                {name}
                 <br/>
-                <label>Username:
                   <input type="text"
                     value={this.state.username}
+                    placeholder="Username"
                     onChange={this.update('username')}
-                    className="login-input"
                   />
-                </label>
                 <br/>
-                <label>Password:
                   <input type="password"
                     value={this.state.password}
+                    placeholder="Password"
                     onChange={this.update('password')}
-                    className="login-input"
                   />
-                </label>
                 <br/>
                 <br/>
-                <input type="submit" value="Submit" />
+                <button type="submit">{submitValue}</button>
               </div>
+              <div className = "errors">{this.renderErrors()}</div>
             </form>
           </div>
           <div className = "switch-session-container">

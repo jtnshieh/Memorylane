@@ -22,7 +22,7 @@ body {
 .login-form-container {
   background-color: white;
   width: 320px;
-  height: 300px;
+  height: 450px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,19 @@ body {
   border-radius: 10px;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.login-form input, button {
+  height: 30px;
+  width: 200px;
+  border-radius: 3px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+.login-form button {
+  color: white;
+  background: #3897f0;
 }
 
 .homepage {
@@ -49,7 +62,7 @@ body {
 .switch-session-container {
   background-color: white;
   width: 320px;
-  height: 150px;
+  height: 100px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -57,4 +70,11 @@ body {
   border-radius: 10px;
   margin-top: 10px;
   margin-left: 10px;
+}
+
+.errors ul {
+  color: red;
+  font-size: 12px;
+  list-style: none;
+  padding: 0px;
 }
