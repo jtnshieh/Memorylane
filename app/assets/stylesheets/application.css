@@ -74,6 +74,7 @@ body {
 
 .switch-session-container a {
   text-decoration: none;
+  color: black;
 }
 
 .errors ul {
