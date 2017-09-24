@@ -83,3 +83,10 @@ body {
   list-style: none;
   padding: 0px;
 }
+
+.header-name {
+  width: 100px;
+}
+.header-button {
+  display: flex;
+}

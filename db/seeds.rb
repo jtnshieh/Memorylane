@@ -12,3 +12,7 @@ user2 = User.create!({full_name: "Nixon Yiu", username: "nixon", password:"12345
 user3 = User.create!({full_name: "Michael Quint", username: "michael", password:"1234567"})
 user4 = User.create!({full_name: "Rebekah Liu", username: "Rebekah", password:"123abcd"})
 user5 = User.create!({full_name: "David Jang", username: "david", password:"123abcde"})
+
+
+post1 = Post.create!({image_url: "http://res.cloudinary.com/dq60klc41/image/upload/v1506131907/images_wbyfnh.jpg", caption: "yay", location:"Taiwan", user_id: 1})
+post2 = Post.create!({image_url: "http://res.cloudinary.com/dq60klc41/image/upload/v1506131866/Cool-Status-For-Instagram-10_spfpm2.jpg", caption: "lol", location:"America", user_id: 2})
