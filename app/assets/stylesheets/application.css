@@ -17,6 +17,7 @@
 body {
   background-color: #f2f2f2;
   font-family: Helvetica, Arial, sans-serif;
+  margin: 0px;
 }
 
 .login-form-container {
@@ -84,9 +85,39 @@ body {
   padding: 0px;
 }
 
-.header-name {
-  width: 100px;
-}
-.header-button {
+.header-group {
   display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-color: white;
+}
+
+.nav-left {
+  display: flex;
+}
+
+.nav-left img {
+  margin: 15px;
+  padding-right: 15px;
+  border-right: 2px solid grey;
+}
+
+.logo-font {
+  font-size: 30px;
+  font-family: 'Lobster Two', cursive;
+  text-decoration: none;
+  color: black;
+  vertical-align: center;
+  margin-top: 19px;
+}
+
+.nav-right {
+  display: flex;
+}
+
+.nav-right img {
+  margin-top: 19px;
+  margin-left: 15px;
+  /*padding-right: 15px;*/
 }

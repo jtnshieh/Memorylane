@@ -44,10 +44,10 @@ class SessionForm extends React.Component {
 
   switchSession() {
     if (this.props.formType === 'login') {
-      return (<div>Don't have an account?<Link to="/signup"> Sign up</Link>
+      return (<div>Don't have an account?<Link to="/signup" onClick={this.props.clearErrors}> Sign up</Link>
       </div>);
     } else {
-      return (<div>Have an account?<Link to="/login"> Log in</Link>
+      return (<div>Have an account?<Link to="/login" onClick={this.props.clearErrors}> Log in</Link>
       </div>);
     }
   }
