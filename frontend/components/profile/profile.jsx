@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileItem from './profile_item';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -11,6 +12,12 @@ class Profile extends React.Component {
 
   render() {
     const user = this.props.user;
+    const profileItem = user.posts.map(post => (
+      <ProfileItem
+        key = { post.id }
+        post = { post }
+      />
+    ));
 
     return this.props.user ? (
       <div>
@@ -22,5 +29,9 @@ class Profile extends React.Component {
     ) : "";
   }
 }
+
+// <ul>
+//   {profileItem}
+// </ul>
 
 export default Profile;
