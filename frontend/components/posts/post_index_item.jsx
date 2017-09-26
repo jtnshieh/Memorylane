@@ -6,21 +6,22 @@ class PostIndexItem extends React.Component {
     const {post} = this.props;
     return(
       <li className='index-item'>
-        <div className="item-header">
-          <div>
+        <div className="item">
+          <div className="index-header">
             <img id="img-circle" src={post.author.profile_pic_url}></img>
+            <div className="index-header-text">
+              <span className="index-username">{post.author.username}</span>
+              <span>{post.location}</span>
+            </div>
           </div>
-          <div className="header-info">
-            {post.author.username}
-            {post.location}
+          <img src={post.image_url}></img>
+          <div className="index-bottom">
+            <div className="index-bottom-text">
+              <span className="index-username">{post.author.username}</span>
+              <span>{post.caption}</span>
+            </div>
           </div>
         </div>
-        <br/>
-        <img src={post.image_url}></img>
-        <br/>
-        {post.author.username}
-        <br/>
-        {post.caption}
       </li>
     );
   }

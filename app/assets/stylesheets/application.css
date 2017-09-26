@@ -142,8 +142,13 @@ body {
 }
 
 .index-item {
-  text-align: center;
+  /*text-align: center;*/
   list-style: none;
+}
+
+.post-index-body {
+  display: flex;
+  justify-content: center;
 }
 
 .post-index-body img {
@@ -153,18 +158,41 @@ body {
 
 #img-circle {
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
 }
 
-.item-header {
-  display: flex;
-  justify-content: flex-start;
-  width: 500px;
-  background-color: white;
-}
-
-.header-info {
+.item {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  margin-bottom: 80px;
+}
+
+.index-header {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.index-header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.index-bottom {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-bottom-text {
+  display: flex;
+}
+
+.index-username {
+  margin-bottom: 3px;
+  margin-right: 3px;
+  font-weight: bold;
 }
