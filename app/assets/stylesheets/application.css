@@ -249,6 +249,10 @@ body {
   font-size: 15px;
 }
 
+.form-right h3 {
+  font-weight: lighter;
+}
+
 #form-location {
   border: solid #e6e6e6 1px;
   height: 25px;
@@ -277,26 +281,53 @@ body {
 .profile-header {
   display: flex;
   justify-content: center;
-  height: 120px;
+  height: 200px;
 }
 
 #profile-pic-circle {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
 }
 
 .profile-header-left {
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 100px;
 }
 
 .profile-header-right {
-  padding: 10px;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 500px;
+}
+
+#profile-username {
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+/*.profile-header-right-a {
+
+}*/
+
+.profile-header-right-b {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+#profile-full-name {
+  font-weight: bolder;
+  margin-right: 8px;
 }
 
 .profile-posts {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
 }

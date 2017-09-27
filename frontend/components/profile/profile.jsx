@@ -33,8 +33,13 @@ class Profile extends React.Component {
             <img id="profile-pic-circle" src={user.profile_pic_url}></img>
           </div>
           <div className="profile-header-right">
-            {user.username}
-            {user.user_blurb}
+            <div className="profile-header-right-a">
+              <span id="profile-username">{user.username}</span>
+            </div>
+            <div className="profile-header-right-b">
+              <span id="profile-full-name">{user.full_name}</span>
+              {user.user_blurb}
+            </div>
           </div>
         </div>
 
