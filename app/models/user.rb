@@ -10,6 +10,15 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Post
 
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Like
+
+  has_many :liked_posts,
+    through: :likes,
+    source: :post
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)
@@ -31,6 +40,10 @@ class User < ApplicationRecord
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save!
     self.session_token
+  end
+
+  def likes?(post)
+    self.liked_posts.include?(post)
   end
 
   private

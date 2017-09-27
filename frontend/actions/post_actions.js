@@ -20,7 +20,6 @@ export const fetchPosts = () => dispatch => (
 );
 
 export const createPost = post => dispatch => {
-  debugger;
   return APIUtil.createPost(post).then(successPost => (
     dispatch(receivePost(successPost))
   ));
