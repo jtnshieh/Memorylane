@@ -84,12 +84,11 @@ class SessionForm extends React.Component {
         </div>
         <div>
           <div className = "login-form-container">
+            <h1 className = "homepage-logo">Memorylane</h1>
+            <h4>Sign up to see photos and videos from your friends.</h4>
+            <button id="demo-login-button" onClick={this.handleDemoLogin}>Demo Log In</button>
             <form onSubmit = {this.handleSubmit} className='login-form-box'>
-              <h1 className = "homepage-logo">Memorylane</h1>
-              <h4>Sign up to see photos and videos from your friends.</h4>
               <div className="login-form">
-                <button onClick={this.handleDemoLogin}>Demo Log In</button>
-                <br/>
                 <br/>
                 {name}
                 <br/>

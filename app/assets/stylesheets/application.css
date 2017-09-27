@@ -33,6 +33,22 @@ body {
   margin-bottom: 10px;
 }
 
+.login-form-container h4 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#demo-login-button {
+  height: 30px;
+  width: 200px;
+  border-radius: 3px;
+  margin: 0px 60px;
+  font-size: 15px;
+  color: white;
+  background: #3897f0;
+  border: none;
+}
+
 .login-form input, button {
   height: 30px;
   width: 200px;
@@ -55,6 +71,7 @@ body {
 .homepage-logo {
   font-size: 45px;
   font-family: 'Lobster Two', cursive;
+  margin: 0px;
 }
 
 .homepage-images {
