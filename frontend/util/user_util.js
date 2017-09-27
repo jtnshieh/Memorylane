@@ -1,4 +1,3 @@
-
 export const getUserInfo = (id)  => {
   return $.ajax({
     method: "GET",

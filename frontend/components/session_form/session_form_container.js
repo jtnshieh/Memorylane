@@ -16,7 +16,8 @@ const mapStateToProps = (state) => {
   return {
     loggedIn: Boolean(state.session.currentUser),
     errors: state.errors.session,
-    formType: location.pathname.slice(1)
+    formType: location.pathname.slice(1),
+    currentUser: state.session.currentUser,
   };
 };
 
