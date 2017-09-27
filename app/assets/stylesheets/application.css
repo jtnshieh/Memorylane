@@ -267,3 +267,42 @@ body {
   width: 300px;
   border: solid #e6e6e6 1px;
 }
+
+.profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: center;
+  height: 120px;
+}
+
+#profile-pic-circle {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.profile-header-left {
+  margin: 10px;
+}
+
+.profile-header-right {
+  padding: 10px;
+  margin: 10px;
+}
+
+.profile-posts {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.profile-item {
+  height: 280px;
+  width: 280px;
+  margin: 15px;
+}

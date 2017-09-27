@@ -12,26 +12,39 @@ class Profile extends React.Component {
 
   render() {
     const user = this.props.user;
-    const profileItem = user.posts.map(post => (
-      <ProfileItem
-        key = { post.id }
-        post = { post }
-      />
-    ));
+    if (!user.posts) {
+      return null;
+    }
+
+    let profileItem;
+    if (user) {
+      profileItem = user.posts.map(post => (
+        <ProfileItem
+          key = { post.id }
+          post = { post }
+          />
+      ));
+    }
 
     return this.props.user ? (
-      <div>
-        {user.username}
-        <br/>
-        {user.user_blurb}
-        <br/>
+      <div className="profile">
+        <div className="profile-header">
+          <div className="profile-header-left">
+            <img id="profile-pic-circle" src={user.profile_pic_url}></img>
+          </div>
+          <div className="profile-header-right">
+            {user.username}
+            {user.user_blurb}
+          </div>
+        </div>
+
+        <ul className="profile-posts">
+          {profileItem}
+        </ul>
       </div>
     ) : "";
   }
 }
 
-// <ul>
-//   {profileItem}
-// </ul>
 
 export default Profile;

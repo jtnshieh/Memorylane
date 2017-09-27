@@ -5,8 +5,8 @@ class ProfileItem extends React.Component {
   render() {
     const {post} = this.props;
     return(
-      <li className='profile-item'>
-        <img src={post.image_url}></img>
+      <li>
+        <img className='profile-item' src={post.image_url}></img>
       </li>
     );
   }
