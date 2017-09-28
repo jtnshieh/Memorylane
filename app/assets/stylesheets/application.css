@@ -159,6 +159,19 @@ body {
   margin: 0px;
 }
 
+#post-item-blank-button {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background: none;
+  border: none;
+  width: auto;
+  padding: 0px;
+  height: 35px;
+  line-height: 75px;
+  margin: 0px;
+  outline: none;
+}
+
 .index-item {
   /*text-align: center;*/
   list-style: none;
@@ -201,7 +214,7 @@ body {
 }
 
 .index-bottom {
-  margin: 10px;
+  margin: 2px 14px 14px 14px;
   display: flex;
   flex-direction: column;
 }
@@ -211,9 +224,14 @@ body {
   flex-direction: column;
 }
 
+.index-bottom-username-section {
+  display: flex;
+  margin-top: 4px;
+}
+
 .index-username {
   margin-bottom: 3px;
-  margin-right: 3px;
+  margin-right: 4px;
   font-weight: bold;
   color: black;
   text-decoration: none;
@@ -365,4 +383,14 @@ body {
 
 .post-show img {
   height: 500px;
+}
+
+.fa.fa-heart, .fa.fa-heart-o {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+}
+
+.fa.fa-heart {
+  color: red;
 }

@@ -23,6 +23,9 @@ class PostIndexItem extends React.Component {
 
   render() {
     const {post} = this.props;
+    const heartType = (post.like === true ?
+      <i className="fa fa-heart" aria-hidden="true"></i> :
+      <i className="fa fa-heart-o" aria-hidden="true"></i>);
 
     if (this.props.post){
       return(
@@ -44,12 +47,14 @@ class PostIndexItem extends React.Component {
             </Link>
             <div className="index-bottom">
               <div className="index-bottom-text">
-                <button onClick={this.handleLike}>
-                  Like
+                <button id="post-item-blank-button" onClick={this.handleLike}>
+                  {heartType}
                 </button>
                 <span>{post.numlikes} likes</span>
-                <span className="index-username">{post.author.username}</span>
-                <span>{post.caption}</span>
+                <div className="index-bottom-username-section">
+                  <span className="index-username">{post.author.username}</span>
+                  <span>{post.caption}</span>
+                </div>
               </div>
             </div>
           </div>
