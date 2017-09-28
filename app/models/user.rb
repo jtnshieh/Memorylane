@@ -14,6 +14,11 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :Like
+  
+  has_many :comments,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Comment
 
   has_many :liked_posts,
     through: :likes,
