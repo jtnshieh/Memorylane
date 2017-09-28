@@ -314,6 +314,10 @@ body {
   border: solid #e6e6e6 1px;
 }
 
+.image-box img {
+  object-fit: contain;
+}
+
 .profile {
   display: flex;
   justify-content: center;
@@ -378,6 +382,8 @@ body {
   height: 280px;
   width: 280px;
   margin: 15px;
+  object-fit: contain;
+  background-color: white;
 }
 
 .post-show .item {
@@ -396,4 +402,13 @@ body {
 
 .fa.fa-heart {
   color: red;
+}
+
+.feed-photo-link {
+  display: flex;
+  justify-content: center;
+}
+
+.feed-photo {
+  object-fit: contain;
 }

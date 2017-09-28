@@ -1,4 +1,4 @@
-import * as UserUtil from '../util/user_util';
+import * as UserUtil from '../util/user_api_util';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const RESET_USER = "RESET_USER";

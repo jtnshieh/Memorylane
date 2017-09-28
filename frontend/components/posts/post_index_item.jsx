@@ -42,8 +42,8 @@ class PostIndexItem extends React.Component {
                 <span>{post.location}</span>
               </div>
             </div>
-            <Link to={`/post/${post.id}`}>
-              <img src={post.image_url}></img>
+            <Link className="feed-photo-link" to={`/post/${post.id}`}>
+              <img className="feed-photo" src={post.image_url}></img>
             </Link>
             <div className="index-bottom">
               <div className="index-bottom-text">
