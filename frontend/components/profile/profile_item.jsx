@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class ProfileItem extends React.Component {
 
@@ -6,7 +7,9 @@ class ProfileItem extends React.Component {
     const {post} = this.props;
     return(
       <li>
-        <img className='profile-item' src={post.image_url}></img>
+        <Link to={`/post/${post.id}`}>
+          <img className='profile-item' src={post.image_url}></img>
+        </Link>
       </li>
     );
   }

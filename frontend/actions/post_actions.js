@@ -13,6 +13,12 @@ export const receivePost = post => ({
   post
 });
 
+export const fetchPost = (id) => dispatch => (
+  APIUtil.fetchPost(id).then(post => (
+    dispatch(receivePost(post))
+  ))
+);
+
 export const fetchPosts = () => dispatch => (
   APIUtil.fetchPosts().then(posts => (
     dispatch(receivePosts(posts))

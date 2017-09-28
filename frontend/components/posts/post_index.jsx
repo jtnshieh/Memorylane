@@ -7,7 +7,6 @@ class PostIndex extends React.Component {
   }
 
   componentWillMount() {
-    console.log("fetching posts");
     this.props.fetchPosts();
     if (this.props.currentUser){
       this.props.getUserInfo(this.props.currentUser.id);
@@ -17,15 +16,17 @@ class PostIndex extends React.Component {
   }
 
   render() {
-    const postIndexItem = this.props.posts.map(post => (
+    const postIndexItem = this.props.posts.map(post => {
+      return (
       <PostIndexItem
         key = { post.id }
         post = { post }
         currentUser = { this.props.currentUser }
         createLike = { this.props.createLike }
         deleteLike = { this.props.deleteLike }
+        fetchPosts = {this.props.fetchPosts }
       />
-    ));
+    );});
     return(
       <div className="post-index-body">
         <ul>

@@ -186,6 +186,7 @@ body {
   flex-direction: column;
   background-color: white;
   margin-bottom: 80px;
+  width: 500px;
 }
 
 .index-header {
@@ -207,12 +208,15 @@ body {
 
 .index-bottom-text {
   display: flex;
+  flex-direction: column;
 }
 
 .index-username {
   margin-bottom: 3px;
   margin-right: 3px;
   font-weight: bold;
+  color: black;
+  text-decoration: none;
 }
 
 
@@ -353,4 +357,12 @@ body {
   height: 280px;
   width: 280px;
   margin: 15px;
+}
+
+.post-show .item {
+  margin: 0 auto 20px auto;
+}
+
+.post-show img {
+  height: 500px;
 }
