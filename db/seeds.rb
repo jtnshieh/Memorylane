@@ -1,4 +1,5 @@
 # This file should contain all the record creation needed to seed the database with its default values.
+
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -27,3 +28,10 @@ post7 = Post.create!({image_url: "http://res.cloudinary.com/dq60klc41/image/uplo
 post8 = Post.create!({image_url: "http://res.cloudinary.com/dq60klc41/image/upload/v1506470499/hNQXkc4OaK-x_wxjngi.jpg", caption: "summer livin", location:"Hawaii", user_id: 4})
 post9 = Post.create!({image_url: "http://res.cloudinary.com/dq60klc41/image/upload/v1506470619/dc9676f4167f3cafc7af4cdcff3b0770--cool-quotes-awesome-quotes_pj3t09.jpg", caption: "deep", location:"my mind", user_id: 4})
 post10 = Post.create!({image_url: "http://res.cloudinary.com/dq60klc41/image/upload/v1506470688/aaa867d33b38156ff607a072e9633017_gyegwx.jpg", caption: "love my friend melody's work", location:"melody's house", user_id: 4})
+
+like1 = Like.create!({user_id: 4, post_id: 6})
+like2 = Like.create!({user_id: 3, post_id: 6})
+like3 = Like.create!({user_id: 4, post_id: 7})
+like4 = Like.create!({user_id: 4, post_id: 8})
+like5 = Like.create!({user_id: 4, post_id: 9})
+like6 = Like.create!({user_id: 4, post_id: 10})

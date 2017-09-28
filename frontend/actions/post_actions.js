@@ -8,7 +8,7 @@ const receivePosts = posts => ({
   posts
 });
 
-const receivePost = post => ({
+export const receivePost = post => ({
   type: RECEIVE_POST,
   post
 });

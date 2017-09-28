@@ -21,6 +21,9 @@ class PostIndex extends React.Component {
       <PostIndexItem
         key = { post.id }
         post = { post }
+        currentUser = { this.props.currentUser }
+        createLike = { this.props.createLike }
+        deleteLike = { this.props.deleteLike }
       />
     ));
     return(

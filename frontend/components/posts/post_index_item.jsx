@@ -1,6 +1,20 @@
 import React from 'react';
 
 class PostIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleLike = this.handleLike.bind(this);
+  }
+
+  handleLike(e) {
+    e.preventDefault();
+    const post = this.props.post;
+    if (post.like === true) {
+      this.props.deleteLike(this.props.currentUser.id, post.id);
+    } else {
+      this.props.createLike(this.props.currentUser.id, post.id);
+    }
+  }
 
   render() {
     const {post} = this.props;
@@ -17,6 +31,10 @@ class PostIndexItem extends React.Component {
           <img src={post.image_url}></img>
           <div className="index-bottom">
             <div className="index-bottom-text">
+              <button onClick={this.handleLike}>
+                Like
+              </button>
+              <span>{post.numlikes}</span>
               <span className="index-username">{post.author.username}</span>
               <span>{post.caption}</span>
             </div>
