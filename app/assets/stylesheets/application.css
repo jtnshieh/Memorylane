@@ -96,7 +96,7 @@ body {
   color: black;
 }
 
-.errors ul {
+.errors ul, #image-error {
   color: red;
   font-size: 12px;
   list-style: none;
@@ -270,7 +270,7 @@ body {
   border: none;
   border-radius: 3px;
   margin-top: 10px;
-  margin-bottom: 17px;
+  margin-bottom: 10px;
 }
 
 #form-submit-button:disabled {
@@ -419,6 +419,7 @@ body {
 
 .feed-photo {
   object-fit: contain;
+  width: 100%;
 }
 
 .post-comments-list {

@@ -43,7 +43,7 @@ class PostForm extends React.Component{
   render() {
     const checkImagePresence = (this.state.image_url === "" ? true : false);
     const renderImageError = (this.state.image_url === "" ?
-    <div>Image is required.</div> : "");
+    <div id="image-error">Image is required.</div> : "");
 
     const image = (this.state.image_url?
       <img src={this.state.image_url} height="200" width="200"></img> : "");
