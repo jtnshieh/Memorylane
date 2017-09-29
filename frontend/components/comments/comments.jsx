@@ -26,7 +26,10 @@ class Comments extends React.Component{
     e.preventDefault();
     const comment = Object.assign({}, this.state);
     comment['post_id'] = this.props.post.id;
-    this.props.createComment(comment).then(() => this.props.fetchPost(this.props.post.id));
+    this.props.createComment(comment).then(() => {
+      this.props.fetchPost(this.props.post.id);
+      this.setState({"body":""});
+    });
   }
 
   render() {
@@ -50,6 +53,7 @@ class Comments extends React.Component{
               key = { postComment.id }
               comment = { postComment }
               deleteComment = { this.props.deleteComment }
+              session = { this.props.session }
             />
           ))
         }

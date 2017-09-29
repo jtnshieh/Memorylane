@@ -14,15 +14,30 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :Like
-  
+
   has_many :comments,
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :Comment
 
+  has_many :followers,
+    primary_key: :id,
+    foreign_key: :follower_id,
+    class_name: :Following
+
+  has_many :followees,
+    primary_key: :id,
+    foreign_key: :following_id,
+    class_name: :Following
+
   has_many :liked_posts,
     through: :likes,
     source: :post
+
+  has_many :followed_users,
+    through: :followees,
+    source: :followee
+
 
   after_initialize :ensure_session_token
 

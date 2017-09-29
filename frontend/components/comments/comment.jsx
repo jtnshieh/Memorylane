@@ -12,6 +12,17 @@ class Comment extends React.Component {
     this.props.deleteComment(this.props.comment);
   }
 
+  renderDeleteButton() {
+    if (this.props.comment.user_id === this.props.session.currentUser.id) {
+      return (
+      <div className="comment-delete-button" onClick={this.handleDelete}>
+        x
+      </div>);
+    } else {
+      return "";
+    }
+  }
+
   render() {
     const {comment} = this.props;
     return (
@@ -20,9 +31,7 @@ class Comment extends React.Component {
           <div className="comment-username">{comment.username}</div>
           <div className="comment-body">{comment.body}</div>
         </div>
-        <div className="comment-delete-button" onClick={this.handleDelete}>
-          x
-        </div>
+        {this.renderDeleteButton()}
       </li>
     );
   }

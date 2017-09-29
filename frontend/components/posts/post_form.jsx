@@ -39,7 +39,12 @@ class PostForm extends React.Component{
     this.props.createPost(post).then(() => this.props.history.push('/feed'));
   }
 
+
   render() {
+    const checkImagePresence = (this.state.image_url === "" ? true : false);
+    const renderImageError = (this.state.image_url === "" ?
+    <div>Image is required.</div> : "");
+
     const image = (this.state.image_url?
       <img src={this.state.image_url} height="200" width="200"></img> : "");
     return (
@@ -76,7 +81,9 @@ class PostForm extends React.Component{
                 type="submit"
                 value="Submit"
                 className="new-post-button"
+                disabled={checkImagePresence}
                 />
+              {renderImageError}
             </form>
           </div>
         </div>

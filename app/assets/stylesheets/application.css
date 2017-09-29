@@ -273,6 +273,10 @@ body {
   margin-bottom: 17px;
 }
 
+#form-submit-button:disabled {
+  background: grey;
+}
+
 .form-left {
   border-right: solid #e6e6e6 1px;
   width: 220px;

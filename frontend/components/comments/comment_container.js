@@ -8,7 +8,8 @@ const mapStateToProps = (state, ownProps) => {
   let x = {
     comments: allComments(state),
     posts: allPosts(state),
-    post: ownProps.post
+    post: ownProps.post,
+    session: state.session
   };
   return x;
 };
