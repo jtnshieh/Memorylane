@@ -68,3 +68,8 @@ Users can upload posts.
 
 * BCrypt for password-salting and hashing for a secure authentication system.
 
+## Additional Features
+
+* Add the Follow feature.
+
+* Implement user search.
