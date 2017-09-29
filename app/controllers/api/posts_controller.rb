@@ -1,7 +1,7 @@
 class Api::PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:likes)
-      render :index
+    render :index
   end
 
   def create

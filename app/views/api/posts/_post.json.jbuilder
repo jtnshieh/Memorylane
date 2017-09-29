@@ -5,6 +5,6 @@ json.numlikes post.likes.count
 # check to see if you can access current_user
 json.like current_user.likes?(post)
 
-json.comments do
+json.commentIds do
   json.array! post.comments.pluck(:id)
 end

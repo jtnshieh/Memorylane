@@ -1,15 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import CommentContainer from '../comments/comment_container';
 
 class PostIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleLike = this.handleLike.bind(this);
   }
-
-  componentDidMount() {
-    this.props.fetchPosts();
-  }
+  //
+  // componentDidMount() {
+  //   this.props.fetchPosts();
+  // }
 
   handleLike(e) {
     e.preventDefault();
@@ -22,7 +23,7 @@ class PostIndexItem extends React.Component {
   }
 
   render() {
-    const {post} = this.props;
+    const {post, comments} = this.props;
     const heartType = (post.like === true ?
       <i className="fa fa-heart" aria-hidden="true"></i> :
       <i className="fa fa-heart-o" aria-hidden="true"></i>);
@@ -54,6 +55,8 @@ class PostIndexItem extends React.Component {
                 <div className="index-bottom-username-section">
                   <span className="index-username">{post.author.username}</span>
                   <span>{post.caption}</span>
+                  <CommentContainer post={post}
+                                    comments={comments}/>
                 </div>
               </div>
             </div>
@@ -61,7 +64,7 @@ class PostIndexItem extends React.Component {
         </li>
       );
     } else {
-      return null;
+      return <div>Loading...</div>;
     }
   }
 }

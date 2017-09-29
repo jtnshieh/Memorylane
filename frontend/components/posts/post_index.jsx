@@ -8,6 +8,7 @@ class PostIndex extends React.Component {
 
   componentWillMount() {
     this.props.fetchPosts();
+    this.props.fetchComments();
     if (this.props.currentUser){
       this.props.getUserInfo(this.props.currentUser.id);
     } else {
@@ -25,8 +26,9 @@ class PostIndex extends React.Component {
         createLike = { this.props.createLike }
         deleteLike = { this.props.deleteLike }
         fetchPosts = {this.props.fetchPosts }
-      />
-    );});
+        comments = {this.props.comments}
+      />);
+    });
     return(
       <div className="post-index-body">
         <ul>
