@@ -7,10 +7,6 @@ class PostIndexItem extends React.Component {
     super(props);
     this.handleLike = this.handleLike.bind(this);
   }
-  //
-  // componentDidMount() {
-  //   this.props.fetchPosts();
-  // }
 
   handleLike(e) {
     e.preventDefault();
@@ -54,10 +50,12 @@ class PostIndexItem extends React.Component {
                 <span>{post.numlikes} likes</span>
                 <div className="index-bottom-username-section">
                   <span className="index-username">{post.author.username}</span>
-                  <span>{post.caption}</span>
-                  <CommentContainer post={post}
-                                    comments={comments}/>
+                  <span className="post-caption">{post.caption}</span>
                 </div>
+                <CommentContainer
+                  post={post}
+                  comments={comments}
+                  />
               </div>
             </div>
           </div>

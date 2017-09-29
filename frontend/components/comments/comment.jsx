@@ -15,9 +15,14 @@ class Comment extends React.Component {
   render() {
     const {comment} = this.props;
     return (
-      <li>
-        <p>{comment.body}</p>
-        <button onClick={this.handleDelete}>delete comment</button>
+      <li className="post-comments">
+        <div className="comment-username-body">
+          <div className="comment-username">{comment.username}</div>
+          <div className="comment-body">{comment.body}</div>
+        </div>
+        <div className="comment-delete-button" onClick={this.handleDelete}>
+          x
+        </div>
       </li>
     );
   }

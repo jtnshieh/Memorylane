@@ -43,7 +43,7 @@ class Comments extends React.Component{
 
     return (
       <div>
-        <ul>
+        <ul className="post-comments-list">
         {
           postComments.map(postComment=> (
             <Comment
@@ -56,11 +56,12 @@ class Comments extends React.Component{
         </ul>
         <form onSubmit={this.handleSubmit}>
           <input
+            className="comment-input"
             type='text'
             value={this.state.body}
             onChange={this.update('body')}
+            placeholder="Add a comment..."
           />
-          <input type="submit" />
         </form>
       </div>
     );
