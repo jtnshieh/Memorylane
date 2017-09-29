@@ -12,19 +12,19 @@ Memorylane is a web application inspired by Instagram for following other users 
 
 Users can sign up or log in to Memorylane using a secure authentication system. The demo login feature allows anyone to explore Memorylane's various features without being a registered user.
 
-![Memorylane Login](https://octodex.github.com/images/yaktocat.png)
+![Memorylane Login](https://github.com/jtnshieh/Memorylane/blob/master/app/assets/images/Memorylane_login.png)
 
 ### Feed
 
 Users can comment on posts and delete their comments, as well as like or unlike a post.
 
-![Memorylane Fee](https://octodex.github.com/images/yaktocat.png)
+![Memorylane Feed](https://github.com/jtnshieh/Memorylane/blob/master/app/assets/images/Memorylane_feed.png)
 
 ### Post Upload
 
 Users can upload posts.
 
-![Memorylane Upload](https://octodex.github.com/images/yaktocat.png)
+![Memorylane Upload](https://github.com/jtnshieh/Memorylane/blob/master/app/assets/images/Memorylane_upload.png)
 
 ## Technologies
 
