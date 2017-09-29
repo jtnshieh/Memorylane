@@ -1,24 +1,58 @@
-# README
+# Memorylane
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Memorylane is a web application inspired by Instagram for following other users and sharing pictures. It was built using Ruby on Rails backend with PostgreSQL database and a React/Redux frontend.
 
-Things you may want to cover:
+## Features & Implementation
 
-* Ruby version
+* Users can upload pictures to their profile, which show up on both their profile and the photo feed page.
 
-* System dependencies
+* Users can comment on a post and delete their comment. They can also like or unlike a post.
 
-* Configuration
+### Secure Authentication
 
-* Database creation
+Users can sign up or log in to Memorylane using a secure authentication system. The demo login feature allows anyone to explore Memorylane's various features without being a registered user.
 
-* Database initialization
+![Memorylane Login](https://octodex.github.com/images/yaktocat.png)
 
-* How to run the test suite
+### Feed
 
-* Services (job queues, cache servers, search engines, etc.)
+Users can comment on posts and delete their comments, as well as like or unlike a post.
 
-* Deployment instructions
+![Memorylane Fee](https://octodex.github.com/images/yaktocat.png)
 
-* ...
+### Post Upload
+
+Users can upload posts.
+
+![Memorylane Upload](https://octodex.github.com/images/yaktocat.png)
+
+## Technologies
+
+### Backend
+
+* Ruby On Rails
+
+* JBuilder
+
+* PostgreSQL Database
+
+* Heroku
+
+### Frontend
+
+* React/Redux
+
+* Javscript
+
+* SCSS/CSS
+
+* npm
+
+* Webpack
+
+### Other
+
+* Cloudinary for users' profile pictures and post pictures storage.
+
+* BCrypt for password-salting and hashing for a secure authentication system.
+
