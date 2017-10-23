@@ -117,8 +117,8 @@ body {
 }
 
 .nav-left img {
-  margin: 15px;
-  padding-right: 15px;
+  margin-top: 23px;
+  padding-right: 10px;
   border-right: 2px solid grey;
 }
 
@@ -129,6 +129,7 @@ body {
   color: black;
   vertical-align: center;
   margin-top: 19px;
+  margin-left: 10px;
 }
 
 .nav-right {
