@@ -2,6 +2,23 @@
 
 [Memorylane](https://gentle-castle-75912.herokuapp.com/#/) is a web application inspired by Instagram for following other users and sharing pictures. It was built using Ruby on Rails backend with PostgreSQL database and a React/Redux frontend.
 
+## Technologies
+
+|Backend|Frontend|
+|---|---|
+|Ruby On Rails|React|
+|JBuilder|Redux|
+|PostgreSQL Database|Javascript|
+|Heroku|HTML|
+||SCSS/CSS|
+||npm|
+||webpack|
+
+#### Other
+* Cloudinary for users' profile pictures and post pictures storage.
+
+* BCrypt for password-salting and hashing for a secure authentication system.
+
 ## Features & Implementation
 
 * Users can upload pictures to their profile, which show up on both their profile and the photo feed page.
@@ -37,36 +54,6 @@ handleSubmit(e) {
 Users can upload posts.
 
 ![Memorylane Upload](https://github.com/jtnshieh/Memorylane/blob/master/app/assets/images/Memorylane_upload.png)
-
-## Technologies
-
-### Backend
-
-* Ruby On Rails
-
-* JBuilder
-
-* PostgreSQL Database
-
-* Heroku
-
-### Frontend
-
-* React/Redux
-
-* Javscript
-
-* SCSS/CSS
-
-* npm
-
-* Webpack
-
-### Other
-
-* Cloudinary for users' profile pictures and post pictures storage.
-
-* BCrypt for password-salting and hashing for a secure authentication system.
 
 ## Additional Features
 
