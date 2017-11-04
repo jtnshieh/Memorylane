@@ -65,12 +65,12 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     const name = this.props.formType === "login" ?
       "" :
       <input type="text"
       value={this.state.full_name}
-      placeholder="Full Name"
+      placeholder=" Full Name"
       onChange={this.update('full_name')}
       className="login-input"
       />;
@@ -94,13 +94,13 @@ class SessionForm extends React.Component {
                 <br/>
                   <input type="text"
                     value={this.state.username}
-                    placeholder="Username"
+                    placeholder=" Username"
                     onChange={this.update('username')}
                   />
                 <br/>
                   <input type="password"
                     value={this.state.password}
-                    placeholder="Password"
+                    placeholder=" Password"
                     onChange={this.update('password')}
                   />
                 <br/>

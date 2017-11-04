@@ -176,6 +176,7 @@ body {
   line-height: 75px;
   margin: 0px;
   outline: none;
+  cursor: pointer;
 }
 
 .index-item {
