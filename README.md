@@ -1,6 +1,6 @@
 # Memorylane
 
-[Memorylane](https://gentle-castle-75912.herokuapp.com/#/) is a web application inspired by Instagram for following other users and sharing pictures. It was built using Ruby on Rails backend with PostgreSQL database and a React/Redux frontend.
+[Memorylane](https://memorylane-justinshieh.herokuapp.com/#/) is a web application inspired by Instagram for following other users and sharing pictures. It was built using Ruby on Rails backend with PostgreSQL database and a React/Redux frontend.
 
 ## Technologies
 

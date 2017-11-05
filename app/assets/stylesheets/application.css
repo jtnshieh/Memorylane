@@ -68,6 +68,10 @@ body {
 .homepage {
   display: flex;
   justify-content: center;
+  background-image: url("http://res.cloudinary.com/dq60klc41/image/upload/c_scale,h_408,w_1600/v1509772922/rustic-wood-planks-background-picture-id480194940_ln3aw7.jpg");
+  margin-top: -100px;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 .homepage-logo {
