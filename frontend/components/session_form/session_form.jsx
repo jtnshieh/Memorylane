@@ -80,7 +80,7 @@ class SessionForm extends React.Component {
     return(
       <div className = "homepage">
         <div className = "homepage-images">
-          <img src = "http://res.cloudinary.com/dq60klc41/image/upload/v1509843830/insta-pic_zxgmgp.png" alt="Instagram phone"/>
+          <img src = "https://res.cloudinary.com/dq60klc41/image/upload/v1509843830/insta-pic_zxgmgp.png" alt="Instagram phone"/>
         </div>
         <div>
           <div className = "login-form-container">
