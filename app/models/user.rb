@@ -20,24 +20,27 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Comment
 
+  has_many :liked_posts,
+    through: :likes,
+    source: :post
+
   has_many :followers,
     primary_key: :id,
     foreign_key: :follower_id,
     class_name: :Following
+
+  has_many :followed_users,
+    through: :followees,
+    source: :follower
 
   has_many :followees,
     primary_key: :id,
     foreign_key: :following_id,
     class_name: :Following
 
-  has_many :liked_posts,
-    through: :likes,
-    source: :post
-
-  has_many :followed_users,
-    through: :followees,
+  has_many :users_followed,
+    through: :followers,
     source: :followee
-
 
   after_initialize :ensure_session_token
 
