@@ -11,6 +11,8 @@ class Api::FollowingsController < ApplicationController
       Following.new(follower_id, following_id)
     end
 
+
+
     render :show
   end
 
