@@ -9,7 +9,14 @@ class Api::FollowingsController < ApplicationController
     else
       render json: @following.errors.full_messages, status: :unprocessable_entity
     end
+  end
 
+  def show
+    @following = Following.find_by_id(params[:id])
+
+    if @following
+      render :show
+    end
   end
 
   def destroy
