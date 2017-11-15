@@ -1,8 +1,20 @@
 class Api::PostsController < ApplicationController
-  def index
-    @posts = Post.all.includes(:likes)
+  def filtered_posts
+    posts = Post.all.includes(:likes)
+    followees = current_user.followees.map{ |follower| follower.id }
+    @posts = posts.select { |post| followees.include?(post.author.id) }
+    # @posts = Post.all.includes(:likes)
+    # puts "current user followees: #{current_user.followers}"
+    p '++++++++++'
+    p
+    p "========="
     render :index
   end
+
+  # def index
+  #   @posts = Post.all.includes(:likes)
+  #   render :index
+  # end
 
   def create
     @post = Post.new(post_params)

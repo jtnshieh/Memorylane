@@ -2,18 +2,28 @@ class Api::FollowingsController < ApplicationController
 
   def create
     follower_id = current_user.id
-    following_id = params[:user_id]
-    @following = Following.find_by(follower_id: follower_id, following_id: following_id)
+    @following = Following.new(follower_id, follow_params)
 
-    if @following
-      @following.destroy
+    if @following.save
+      render :show
     else
-      Following.new(follower_id, following_id)
+      render json: @following.errors.full_messages, status: :unprocessable_entity
     end
 
+  end
 
+  def destroy
+    follower_id = current_user.id
+    @following = Following.find(follower_id, follow_params)
+    if @following
+      @following.destroy
+    end
+  end
 
-    render :show
+  private
+
+  def follow_params
+    params.require(:following).permit(:followee_id)
   end
 
 end

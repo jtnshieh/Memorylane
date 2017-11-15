@@ -24,23 +24,23 @@ class User < ApplicationRecord
     through: :likes,
     source: :post
 
-  has_many :users_following_me,
+  has_many :users_i_follow,
     primary_key: :id,
     foreign_key: :follower_id,
     class_name: :Following
 
   has_many :followees,
-    through: :users_following_me,
-    source: :follower
+    through: :users_i_follow,
+    source: :followee
 
-  has_many :users_i_follow,
+  has_many :users_following_me,
     primary_key: :id,
     foreign_key: :following_id,
     class_name: :Following
 
   has_many :followers,
-    through: :users_i_follow,
-    source: :followee
+    through: :users_following_me,
+    source: :follower
 
   after_initialize :ensure_session_token
 
