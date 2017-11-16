@@ -22,8 +22,10 @@ class Api::FollowingsController < ApplicationController
   def destroy
     follower_id = current_user.id
     @following = Following.find(follower_id, follow_params)
-    if @following
-      @following.destroy
+    if @following.destroy
+      render :show
+    else
+      render json: @following.errors.full_messages, status: 422
     end
   end
 

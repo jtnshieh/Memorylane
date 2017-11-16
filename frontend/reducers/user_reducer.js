@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 import { RECEIVE_USER, RESET_USER } from '../actions/user_actions';
-import { RECEIVE_FOLLOWING } from '../actions/following_actions';
+import { RECEIVE_FOLLOWING, REMOVE_FOLLOWING } from '../actions/following_actions';
 
 // const nullUser = Object.freeze({
 //   user: null
@@ -16,6 +16,11 @@ const UserReducer = (state = {}, action) => {
     case RECEIVE_FOLLOWING:
       const newState = Object.assign({}, state);
       newState["followees"].push(action.follower);
+      return newState;
+    case REMOVE_FOLLOWING:
+      const anotherState = Object.assign({}, state);
+      const index = anotherState["followees"].indexOf(action.follower);
+      anotherState["followees"].splice(index, 1);
       return newState;
     default:
       return state;
