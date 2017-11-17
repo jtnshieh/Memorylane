@@ -1,2 +1,2 @@
-json.follower @following.follower.id
-json.followee @following.followee.id
+# json.follower @following.follower.id
+# json.followee @following.followee.id

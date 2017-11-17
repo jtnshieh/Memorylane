@@ -11,18 +11,19 @@ class Api::FollowingsController < ApplicationController
     end
   end
 
-  def show
-    @following = Following.find_by_id(params[:id])
-
-    if @following
-      render :show
-    end
-  end
+  # def show
+  #   @following = Following.find_by_id(params[:id])
+  #
+  #   if @following
+  #     render :show
+  #   end
+  # end
 
   def destroy
     follower_id = current_user.id
     @following = Following.find(follower_id, follow_params)
-    if @following.destroy
+    if @following
+      @following.destroy
       render :show
     else
       render json: @following.errors.full_messages, status: 422
