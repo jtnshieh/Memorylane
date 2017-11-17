@@ -5,24 +5,22 @@ export const REMOVE_FOLLOWING = 'REMOVE FOLLOWING';
 
 export const receiveFollowing = following => ({
   type: RECEIVE_FOLLOWING,
-  follower: following.follower,
-  followee: following.followee
+  following
 });
 
 export const removeFollowing = following => ({
   type: REMOVE_FOLLOWING,
-  follower: following.follower,
-  followee: following.followee
+  following
 });
 
-export const createFollowing = (followee_id) => dispatch => {
-  return FollowingUtil.createFollowing(followee_id).then(following => (
-    dispatch(receiveFollowing(following))
+export const createFollowing = (followerId, followeeId) => dispatch => {
+  return FollowingUtil.createFollowing(followerId, followeeId)
+         .then(following => (dispatch(receiveFollowing(following))
   ));
 };
 
-export const deleteFollowing = (followee_id) => dispatch => {
-  return FollowingUtil.deleteFollowing(followee_id).then(following => (
-    dispatch(removeFollowing(following))
+export const deleteFollowing = (followerId, followeeId) => dispatch => {
+  return FollowingUtil.deleteFollowing(followerId, followeeId)
+         .then(following => (dispatch(removeFollowing(following))
   ));
 };

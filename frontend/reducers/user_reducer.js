@@ -15,12 +15,11 @@ const UserReducer = (state = {}, action) => {
       return {};
     case RECEIVE_FOLLOWING:
       const newState = Object.assign({}, state);
-      newState["followees"].push(action.follower);
+      newState[action.followed] = true;
       return newState;
     case REMOVE_FOLLOWING:
       const anotherState = Object.assign({}, state);
-      const index = anotherState["followees"].indexOf(action.follower);
-      anotherState["followees"].splice(index, 1);
+      anotherState[action.followed] = false;
       return newState;
     default:
       return state;
