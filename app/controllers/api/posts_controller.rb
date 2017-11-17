@@ -3,11 +3,6 @@ class Api::PostsController < ApplicationController
     posts = Post.all.includes(:likes)
     followees = current_user.followees.map{ |follower| follower.id }
     @posts = posts.select { |post| followees.include?(post.author.id) }
-    # @posts = Post.all.includes(:likes)
-    # puts "current user followees: #{current_user.followers}"
-    p '++++++++++'
-    p
-    p "========="
     render :index
   end
 
