@@ -13,7 +13,8 @@ class Api::FollowingsController < ApplicationController
 
   def destroy
     # follower_id = current_user.id
-    @following = Following.find(follow_params)
+    @following = Following.find_by(follower_id: follow_params[:follower_id],
+                                   following_id: follow_params[:following_id])
     if @following
       @following.destroy
       render :show
@@ -25,7 +26,7 @@ class Api::FollowingsController < ApplicationController
   private
 
   def follow_params
-    params.require(:following).permit(:followee_id, :follower_id)
+    params.require(:following).permit(:following_id, :follower_id)
   end
 
 end

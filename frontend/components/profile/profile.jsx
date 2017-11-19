@@ -4,10 +4,43 @@ import ProfileItem from './profile_item';
 class Profile extends React.Component {
   constructor(props) {
     super(props);
+    this.followOrUnfollow = this.followOrUnfollow.bind(this);
+    this.follow = this.follow.bind(this);
+    this.unfollow = this.unfollow.bind(this);
   }
 
   componentDidMount() {
     this.props.getUserInfo(this.props.match.params.userId);
+  }
+
+  follow(e) {
+    e.preventDefault();
+    this.props.createFollowing(this.props.currentUser.id, this.props.user.id);
+  }
+
+  unfollow(e) {
+    e.preventDefault();
+    this.props.deleteFollowing(this.props.currentUser.id, this.props.user.id);
+  }
+
+  followOrUnfollow() {
+    if(this.props.currentUser.id !== this.props.user.id) {
+      if(this.props.user.followed){
+        return (
+          <button className="profile-header-right-1-edit-button"
+                  onClick={this.unfollow}>
+            Following
+          </button>
+        );
+      } else {
+        return (
+          <button className="profile-header-right-1-edit-follow"
+                  onClick={this.follow}>
+            Follow
+          </button>
+        );
+      }
+    }
   }
 
   render() {
@@ -39,6 +72,9 @@ class Profile extends React.Component {
             <div className="profile-header-right-b">
               <span id="profile-full-name">{user.full_name}</span>
               {user.user_blurb}
+            </div>
+            <div>
+              {this.followOrUnfollow()}
             </div>
           </div>
         </div>
