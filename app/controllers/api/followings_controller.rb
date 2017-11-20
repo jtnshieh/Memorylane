@@ -5,7 +5,7 @@ class Api::FollowingsController < ApplicationController
     @following = Following.new(follow_params)
 
     if @following.save
-      render :show
+      render json: @follow
     else
       render json: @following.errors.full_messages, status: :unprocessable_entity
     end
@@ -17,7 +17,7 @@ class Api::FollowingsController < ApplicationController
                                    following_id: follow_params[:following_id])
     if @following
       @following.destroy
-      render :show
+      render json: @follow
     else
       render json: @following.errors.full_messages, status: 422
     end
