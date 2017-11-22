@@ -20,6 +20,7 @@ export const createFollowing = (followerId, followeeId) => dispatch => {
 };
 
 export const deleteFollowing = (followerId, followeeId) => dispatch => {
+  // debugger;
   return FollowingUtil.deleteFollowing(followerId, followeeId)
          .then(following => (dispatch(removeFollowing(following))
   ));
