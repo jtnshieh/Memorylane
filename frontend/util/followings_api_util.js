@@ -6,6 +6,7 @@ export const createFollowing = (followerId, followingId) => (
   })
 );
 
+
 export const deleteFollowing = (followerId, followingId) => {
   console.log(followerId);
   console.log(followingId);
