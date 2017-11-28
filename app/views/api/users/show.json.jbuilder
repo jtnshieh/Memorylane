@@ -14,6 +14,8 @@ json.posts_count @user.posts.count
 json.followees_count @user.followees.count
 json.followers_count @user.followers.count
 
+# print @user.followers.pluck(:id)
+
 if @user.followers.pluck(:id).include?(current_user.id)
   json.followed true
 else

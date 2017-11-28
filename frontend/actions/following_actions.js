@@ -15,13 +15,13 @@ export const removeFollowing = following => ({
 
 export const createFollowing = (followerId, followeeId) => dispatch => {
   return FollowingUtil.createFollowing(followerId, followeeId)
-         .then(following => (dispatch(receiveFollowing(following))
+         .then(() => (dispatch(receiveFollowing())
   ));
 };
 
 export const deleteFollowing = (followerId, followeeId) => dispatch => {
   // debugger;
   return FollowingUtil.deleteFollowing(followerId, followeeId)
-         .then(following => (dispatch(removeFollowing(following))
+         .then(() => (dispatch(removeFollowing())
   ));
 };

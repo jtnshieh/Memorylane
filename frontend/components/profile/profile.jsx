@@ -27,14 +27,14 @@ class Profile extends React.Component {
     if(this.props.currentUser.id !== this.props.user.id) {
       if(this.props.user.followed){
         return (
-          <button className="profile-header-right-1-edit-button"
+          <button
                   onClick={this.unfollow}>
             Following
           </button>
         );
       } else {
         return (
-          <button className="profile-header-right-1-edit-follow"
+          <button
                   onClick={this.follow}>
             Follow
           </button>
