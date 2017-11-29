@@ -8,6 +8,10 @@ class PostIndexItem extends React.Component {
     this.handleLike = this.handleLike.bind(this);
   }
 
+  componentWillMount() {
+    this.props.fetchPost(this.props.match.params.postId);
+  }
+
   handleLike(e) {
     e.preventDefault();
     const post = this.props.post;
@@ -19,8 +23,10 @@ class PostIndexItem extends React.Component {
   }
 
   render() {
+    debugger
+    console.log(this.props.post);
     const {post, comments} = this.props;
-    const heartType = (post.like === true ?
+    const heartType = (this.props.post.like === true ?
       <i className="fa fa-heart" aria-hidden="true"></i> :
       <i className="fa fa-heart-o" aria-hidden="true"></i>);
 

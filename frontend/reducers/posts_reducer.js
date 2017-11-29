@@ -1,4 +1,5 @@
 import { RECEIVE_POSTS, RECEIVE_POST } from '../actions/post_actions';
+import { RECEIVE_USER } from '../actions/user_actions';
 import merge from 'lodash/merge';
 
 const PostsReducer = (state = {}, action) => {
@@ -12,6 +13,13 @@ const PostsReducer = (state = {}, action) => {
       newState[action.post.id] = action.post;
       return newState;
       // return merge({}, state, {[action.post.id]:action.post});
+    case RECEIVE_USER:
+      const testState = Object.assign({}, state);
+      action.user.posts.forEach(post => {
+        testState[post.id] = post;
+        testState[post.id]['author'] = action.user;
+      });
+      return testState;
     default:
       return state;
   }
