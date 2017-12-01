@@ -35,7 +35,6 @@ class Comments extends React.Component{
   render() {
     const postComments = [];
 
-
     this.props.comments.map(comment=> {
       this.props.post.commentIds.map(postCommentId=> {
         if (postCommentId === comment.id) {
