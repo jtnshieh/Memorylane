@@ -112,9 +112,8 @@ body {
 
 .header-group {
   display: flex;
-  justify-content: space-between;
-  padding-right: 75px;
-  padding-left: 75px;
+  justify-content: space-around;
+  height: 80px;
   background-color: white;
   border: solid #e6e6e6 1px;
 }
@@ -375,6 +374,11 @@ body {
 
 .profile-header-right-a {
   display: flex;
+}
+
+.follow-button {
+  margin-left: 20px;
+  width: 140px;
 }
 
 .profile-header-right-b {
