@@ -3,9 +3,8 @@ import * as FollowingUtil from '../util/followings_api_util';
 export const RECEIVE_FOLLOWING = 'RECEIVE FOLLOWING';
 export const REMOVE_FOLLOWING = 'REMOVE FOLLOWING';
 
-export const receiveFollowing = following => ({
-  type: RECEIVE_FOLLOWING,
-  following
+export const receiveFollowing = () => ({
+  type: RECEIVE_FOLLOWING
 });
 
 export const removeFollowing = following => ({

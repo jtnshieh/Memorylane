@@ -3,7 +3,7 @@
 export const fetchPosts = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/posts/filtered_posts'
+    url: 'api/posts/'
   })
 );
 

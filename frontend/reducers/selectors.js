@@ -1,5 +1,5 @@
 export const allPosts = (state) => {
-    return Object.values(state.posts).reverse();
+    return Object.values(state.posts);
  };
 
 export const allComments = (state) => {

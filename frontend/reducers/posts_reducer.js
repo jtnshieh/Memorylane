@@ -13,13 +13,13 @@ const PostsReducer = (state = {}, action) => {
       newState[action.post.id] = action.post;
       return newState;
       // return merge({}, state, {[action.post.id]:action.post});
-    case RECEIVE_USER:
-      const testState = Object.assign({}, state);
-      action.user.posts.forEach(post => {
-        testState[post.id] = post;
-        testState[post.id]['author'] = action.user;
-      });
-      return testState;
+    // case RECEIVE_USER:
+    //   const testState = Object.assign({}, state);
+    //   action.user.posts.forEach(post => {
+    //     testState[post.id] = post;
+    //     testState[post.id]['author'] = action.user;
+    //   });
+    //   return testState;
     default:
       return state;
   }

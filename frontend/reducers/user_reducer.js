@@ -20,7 +20,7 @@ const UserReducer = (state = {}, action) => {
     case REMOVE_FOLLOWING:
       const anotherState = Object.assign({}, state);
       anotherState["followed"] = false;
-      return newState;
+      return anotherState;
     default:
       return state;
   }

@@ -13,7 +13,7 @@ nixon = User.create!({full_name: "Nixon Yiu", username: "nixonyiu", password:"12
 michael = User.create!({full_name: "Michael Quint", username: "michael123", password:"1234567", user_blurb:"made in 1994", profile_pic_url:"http://res.cloudinary.com/dq60klc41/image/upload/v1506399309/profile-view-of-confident-sportsman-picture-id488758510_ytsgb3.jpg"})
 rebekah = User.create!({full_name: "Rebekah Liu", username: "rebekaaaaa", password:"123abcd", user_blurb:"I may have the world's most unique laugh", profile_pic_url:"http://res.cloudinary.com/dq60klc41/image/upload/v1506399259/68f7d9ba482190ce2374e3514ea582ec--girl-profile-profile-face_qf1fvc.jpg"})
 david = User.create!({full_name: "David Jang", username: "davidj", password:"123abcde", user_blurb:"I'm a Triton and coder", profile_pic_url:"http://res.cloudinary.com/dq60klc41/image/upload/v1506399351/Hy1QFuU_johwt0.jpg"})
-demo = User.create!({full_name: "Demo User", username: "demo", password:"123456", user_blurb:"I'm demo :)", profile_pic_url:"https://res.cloudinary.com/dq60klc41/image/upload/v1509478909/z3pojuuz6ccyopab85i8.jpg"})
+demo = User.create!({full_name: "Demo User", username: "demo", password:"123456", user_blurb:"I'm demo :)", profile_pic_url:"https://res.cloudinary.com/dq60klc41/image/upload/v1512109723/justin_kpdjxs.jpg"})
 
 
 post1 = Post.create!({image_url: "http://res.cloudinary.com/dq60klc41/image/upload/v1506131907/images_wbyfnh.jpg", caption: "Popcorn and rain - two of my favorite things", location:"San Francisco", user_id: betty.id})

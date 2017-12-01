@@ -24,11 +24,11 @@ class PostIndexItem extends React.Component {
 
   render() {
     const {post, comments} = this.props;
-    const heartType = (this.props.post.like === true ?
+    const heartType = (post.like === true ?
       <i className="fa fa-heart" aria-hidden="true"></i> :
       <i className="fa fa-heart-o" aria-hidden="true"></i>);
 
-    if (this.props.post){
+    if (post){
       return(
         <li className={`index-item ${this.props.isShow ? 'post-show' : ''}`}>
           <div className="item">

@@ -27,15 +27,13 @@ class Profile extends React.Component {
     if(this.props.currentUser.id !== this.props.user.id) {
       if(this.props.user.followed){
         return (
-          <button
-                  onClick={this.unfollow}>
+          <button onClick={this.unfollow}>
             Following
           </button>
         );
       } else {
         return (
-          <button
-                  onClick={this.follow}>
+          <button onClick={this.follow}>
             Follow
           </button>
         );
