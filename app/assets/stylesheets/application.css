@@ -201,7 +201,6 @@ body {
 }
 
 #img-circle {
-  object-fit: contain;
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -374,11 +373,19 @@ body {
   font-weight: lighter;
 }
 
-/*.profile-header-right-a {
-
-}*/
+.profile-header-right-a {
+  display: flex;
+}
 
 .profile-header-right-b {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.profile-header-right-c {
   display: flex;
   justify-content: flex-start;
   font-size: 20px;

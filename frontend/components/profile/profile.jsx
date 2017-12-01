@@ -7,6 +7,9 @@ class Profile extends React.Component {
     this.followOrUnfollow = this.followOrUnfollow.bind(this);
     this.follow = this.follow.bind(this);
     this.unfollow = this.unfollow.bind(this);
+    this.state = {
+      render: ""
+    };
   }
 
   componentDidMount() {
@@ -15,12 +18,18 @@ class Profile extends React.Component {
 
   follow(e) {
     e.preventDefault();
-    this.props.createFollowing(this.props.currentUser.id, this.props.user.id);
+    this.props.createFollowing(this.props.currentUser.id, this.props.user.id).then(() => {
+      this.props.getUserInfo(this.props.user.id);
+      this.setState({render:""});
+    });
   }
 
   unfollow(e) {
     e.preventDefault();
-    this.props.deleteFollowing(this.props.currentUser.id, this.props.user.id);
+    this.props.deleteFollowing(this.props.currentUser.id, this.props.user.id).then(() => {
+      this.props.getUserInfo(this.props.user.id);
+      this.setState({render:""});
+    });
   }
 
   followOrUnfollow() {
@@ -57,7 +66,7 @@ class Profile extends React.Component {
       ));
     }
 
-    return this.props.user ? (
+    return user ? (
       <div className="profile">
         <div className="profile-header">
           <div className="profile-header-left">
@@ -66,13 +75,16 @@ class Profile extends React.Component {
           <div className="profile-header-right">
             <div className="profile-header-right-a">
               <span id="profile-username">{user.username}</span>
+              <span>{this.followOrUnfollow()}</span>
             </div>
             <div className="profile-header-right-b">
+              <span>{user.posts_count} posts</span>
+              <span>{user.followers_count} followers</span>
+              <span>{user.followees_count} following</span>
+            </div>
+            <div className="profile-header-right-c">
               <span id="profile-full-name">{user.full_name}</span>
               {user.user_blurb}
-            </div>
-            <div>
-              {this.followOrUnfollow()}
             </div>
           </div>
         </div>
