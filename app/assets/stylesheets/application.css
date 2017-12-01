@@ -112,7 +112,9 @@ body {
 
 .header-group {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 120px;
+  padding-right: 150px;
   height: 80px;
   background-color: white;
   border: solid #e6e6e6 1px;
@@ -404,8 +406,9 @@ body {
 .profile-posts {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   list-style: none;
+  width: 1000px;
+  align-self: center;
 }
 
 .profile-item {
