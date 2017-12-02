@@ -8,7 +8,10 @@ class ProfileItem extends React.Component {
     return(
       <li>
         <Link to={`/post/${post.id}`}>
-          <img className='profile-item' src={post.image_url}></img>
+          <div className="profile-item-parent">
+            <img className='profile-item' src={post.image_url}>
+            </img>
+          </div>
         </Link>
       </li>
     );

@@ -16,6 +16,12 @@ class Profile extends React.Component {
     this.props.getUserInfo(this.props.match.params.userId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.match.params.userId !== this.props.match.params.userId) {
+      this.props.getUserInfo(nextProps.match.params.userId);
+    }
+  }
+
   follow(e) {
     e.preventDefault();
     this.props.createFollowing(this.props.currentUser.id, this.props.user.id).then(() => {
