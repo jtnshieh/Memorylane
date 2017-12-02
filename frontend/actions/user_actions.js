@@ -15,3 +15,7 @@ export const resetUser = () => ({
 export const getUserInfo = (id) => dispatch => (
   UserUtil.getUserInfo(id).then(user => dispatch(receiveUser(user)))
 );
+
+export const clearUser = () => dispatch => {
+  return dispatch(resetUser());
+};

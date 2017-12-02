@@ -12,8 +12,12 @@ class Profile extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.getUserInfo(this.props.match.params.userId);
+  }
+
+  componentWillUnmount() {
+    this.props.clearUser();
   }
 
   componentWillReceiveProps(nextProps) {

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Profile from './profile';
-import { getUserInfo } from '../../actions/user_actions';
+import { getUserInfo, clearUser } from '../../actions/user_actions';
 import { createFollowing, deleteFollowing } from '../../actions/following_actions';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   getUserInfo: (id) => dispatch(getUserInfo(id)),
+  clearUser: () => dispatch(clearUser()),
   createFollowing: (followerId, followeeId) =>
                 dispatch(createFollowing(followerId, followeeId)),
   deleteFollowing: (followerId, followeeId) =>
