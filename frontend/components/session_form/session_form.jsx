@@ -65,7 +65,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    // console.log(this.state);
     const name = this.props.formType === "login" ?
       "" :
       <input type="text"
