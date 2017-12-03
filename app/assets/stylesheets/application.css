@@ -412,34 +412,22 @@ body {
   align-self: center;
 }
 
-.profile-item {
-  opacity: 1;
+.profile-item-parent {
   height: 280px;
   width: 280px;
   margin: 15px;
+  background-color: #000;
+}
+
+.profile-item {
+  height: 280px;
+  width: 280px;
   object-fit: contain;
-  background-color: white;
 }
 
-/*.profile-item:hover {
-  opacity: 0.6;
-}*/
-
-/*.profile-item:after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background: rgba(0,0,0,.5);
-  -moz-transition: all 1s;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+.profile-item:hover {
+  opacity:0.5;
 }
-
-.profile-item:hover:after {
-    opacity: 1;
-}*/
 
 .post-show .item {
   margin: 0 auto 20px auto;

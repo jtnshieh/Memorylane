@@ -14,6 +14,7 @@ class Profile extends React.Component {
 
   componentWillMount() {
     this.props.getUserInfo(this.props.match.params.userId);
+    this.props.fetchPosts();
   }
 
   componentWillUnmount() {
@@ -68,14 +69,33 @@ class Profile extends React.Component {
       return null;
     }
 
+    // let profileItem;
+    // if (user) {
+    //   profileItem = user.posts.map(post => (
+    //     <ProfileItem
+    //       key = { post.id }
+    //       post = { post }
+    //       />
+    //   ));
+    // }
+
+    // this.props.posts.map(post=> {
+    //   console.log(post.location);
+    // });
+
     let profileItem;
     if (user) {
-      profileItem = user.posts.map(post => (
-        <ProfileItem
-          key = { post.id }
-          post = { post }
-          />
-      ));
+      profileItem = user.posts.map(userPost => {
+        this.props.posts.map(post => {
+          if (userPost.id === post.id) {
+            console.log(post.location);
+            return <ProfileItem
+                    key = { post.id }
+                    post = { post }
+                   />;
+          }
+        });
+      });
     }
 
     return user ? (

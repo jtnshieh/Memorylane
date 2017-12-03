@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 class ProfileItem extends React.Component {
 
   render() {
+    console.log(this.props.post);
     const {post} = this.props;
     return(
       <li>
@@ -11,6 +12,8 @@ class ProfileItem extends React.Component {
           <div className="profile-item-parent">
             <img className='profile-item' src={post.image_url}>
             </img>
+            <span>{post.commentIds.count}</span>
+            <span>{post.numLikes}</span>
           </div>
         </Link>
       </li>

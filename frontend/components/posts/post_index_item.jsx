@@ -51,7 +51,7 @@ class PostIndexItem extends React.Component {
                 <button id="post-item-blank-button" onClick={this.handleLike}>
                   {heartType}
                 </button>
-                <span>{post.numlikes} likes</span>
+                <span>{post.numLikes} likes</span>
                 <div className="index-bottom-username-section">
                   <span className="index-username">{post.author.username}</span>
                   <span className="post-caption">{post.caption}</span>
