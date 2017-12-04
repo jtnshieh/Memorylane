@@ -18,6 +18,7 @@ class ProfileItem extends React.Component {
     );
   }
 }
+
 // <span>{post.commentIds.count}</span>
 // <span>{post.numLikes}</span>
 
