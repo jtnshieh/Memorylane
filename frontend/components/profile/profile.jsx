@@ -7,6 +7,7 @@ class Profile extends React.Component {
     this.followOrUnfollow = this.followOrUnfollow.bind(this);
     this.follow = this.follow.bind(this);
     this.unfollow = this.unfollow.bind(this);
+    this.getProfileItems = this.getProfileItems.bind(this);
     this.state = {
       render: ""
     };
@@ -63,6 +64,18 @@ class Profile extends React.Component {
     }
   }
 
+  getProfileItems() {
+    const profileItems = [];
+    this.props.user.posts.forEach(userPost => {
+      this.props.posts.forEach(post => {
+        if (userPost.id === post.id) {
+          profileItems.push(post);
+        }
+      });
+    });
+    return profileItems;
+  }
+
   render() {
     const user = this.props.user;
     const posts = this.props.posts;
@@ -70,30 +83,7 @@ class Profile extends React.Component {
       return null;
     }
 
-    const profileItem = user.posts.map(post => {
-      return (
-      <ProfileItem
-        key = { post.id }
-        post = { post }
-      />);
-    });
-
-    // this.props.posts.map(post=> {
-    //   console.log(post.location);
-    // });
-
-    // const profileItem = user.posts.map(userPost => {
-    //   this.props.posts.map(post => {
-    //     if (userPost.id === post.id) {
-    //       console.log(post);
-    //       return (
-    //       <ProfileItem
-    //         key = { post.id }
-    //         post = { post }
-    //       />);
-    //     }
-    //   });
-    // });
+    const profileItems = this.getProfileItems();
 
     return user ? (
       <div className="profile">
@@ -119,7 +109,14 @@ class Profile extends React.Component {
         </div>
 
         <ul className="profile-posts">
-          {profileItem}
+          {
+            profileItems.map(profileItem=> (
+              <ProfileItem
+                key = { profileItem.id }
+                post = { profileItem }
+              />
+            ))
+          }
         </ul>
       </div>
     ) : "";

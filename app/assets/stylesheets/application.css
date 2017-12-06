@@ -417,17 +417,24 @@ body {
   width: 280px;
   margin: 15px;
   background-color: #000;
+  text-decoration-color: white;
 }
 
 .profile-item {
   height: 280px;
   width: 280px;
   object-fit: contain;
+  /*position: absolute;*/
 }
 
 .profile-item:hover {
   opacity:0.5;
+  /*display: block;*/
 }
+
+/*.overlay:hover {
+  visibility: visible;
+}*/
 
 .post-show .item {
   margin: 0 auto 20px auto;
