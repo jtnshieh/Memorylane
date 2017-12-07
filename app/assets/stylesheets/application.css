@@ -112,12 +112,19 @@ body {
 
 .header-group {
   display: flex;
-  justify-content: space-between;
-  padding-left: 120px;
-  padding-right: 150px;
+  justify-content: center;
+  width: 100%;
   height: 80px;
   background-color: white;
   border: solid #e6e6e6 1px;
+}
+
+.header-subgroup {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  width: 100%;
+  height: 80px;
 }
 
 .nav-left {
@@ -274,8 +281,8 @@ body {
   background-color: white;
   border: solid #e6e6e6 1px;
   border-radius: 5px;
-  height: 550px;
-  width: 700px;
+  height: 530px;
+  width: 730px;
 }
 
 #upload-button, #form-submit-button {
@@ -287,7 +294,7 @@ body {
   border: none;
   border-radius: 3px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #form-submit-button:disabled {
@@ -308,7 +315,7 @@ body {
 }
 
 .form-right {
-  width: 480px;
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -334,7 +341,7 @@ body {
 }
 
 .image-box {
-  height: 200px;
+  height: 150px;
   width: 300px;
   border: solid #e6e6e6 1px;
 }
@@ -397,6 +404,10 @@ body {
   font-weight: lighter;
 }
 
+.profile-counts {
+  font-weight: bold;
+}
+
 .profile-header-right-c {
   display: flex;
   justify-content: flex-start;
@@ -413,8 +424,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  width: 1000px;
+  width: 930px;
   align-self: center;
+  padding-left: 0px;
 }
 
 .profile-item-parent {
@@ -465,7 +477,7 @@ body {
 }
 
 .post-show .item {
-  margin: 0 auto 20px auto;
+  margin: 0px auto 20px auto;
 }
 
 .post-show img {

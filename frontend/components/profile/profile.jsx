@@ -97,9 +97,15 @@ class Profile extends React.Component {
               <span>{this.followOrUnfollow()}</span>
             </div>
             <div className="profile-header-right-b">
-              <span>{user.posts_count} posts</span>
-              <span>{user.followers_count} followers</span>
-              <span>{user.followees_count} following</span>
+              <span>
+                <span className="profile-counts">{user.posts_count}</span> posts
+              </span>
+              <span>
+                <span className="profile-counts">{user.followers_count}</span> followers
+              </span>
+              <span>
+                <span className="profile-counts">{user.followees_count}</span> following
+              </span>
             </div>
             <div className="profile-header-right-c">
               <span id="profile-full-name">{user.full_name}</span>
