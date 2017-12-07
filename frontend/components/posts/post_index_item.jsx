@@ -8,10 +8,6 @@ class PostIndexItem extends React.Component {
     this.handleLike = this.handleLike.bind(this);
   }
 
-  // componentWillMount() {
-  //   this.props.fetchPost(this.props.match.params.postId);
-  // }
-
   handleLike(e) {
     e.preventDefault();
     const post = this.props.post;
