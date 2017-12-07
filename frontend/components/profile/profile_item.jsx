@@ -14,6 +14,16 @@ class ProfileItem extends React.Component {
           <div className="profile-item-parent">
             <img className='profile-item' src={post.image_url}>
             </img>
+            <div className="overlay">
+                <div className="overlay-likes">
+                  <img src="http://res.cloudinary.com/dq60klc41/image/upload/v1512278227/icons8-heart-50_keda76.png"></img>
+                  <span>{post.numLikes}</span>
+                </div>
+                <div className="overlay-comments">
+                  <img src="http://res.cloudinary.com/dq60klc41/image/upload/v1512278217/icons8-speech-bubble-filled-50_igwdio.png"></img>
+                  <span>{post.commentIds.length}</span>
+                </div>
+            </div>
           </div>
         </Link>
       </li>
@@ -21,14 +31,6 @@ class ProfileItem extends React.Component {
   }
 }
 
-// <div className="overlay">
-//   <div>
-//     <img src="http://res.cloudinary.com/dq60klc41/image/upload/v1512278227/icons8-heart-50_keda76.png"></img>
-//     <span>{post.commentIds.count}</span>
-//     <img src="http://res.cloudinary.com/dq60klc41/image/upload/v1512278217/icons8-speech-bubble-filled-50_igwdio.png"></img>
-//     <span>{post.numLikes}</span>
-//   </div>
-// </div>
 
 
 export default ProfileItem;

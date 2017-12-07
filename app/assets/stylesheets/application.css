@@ -416,25 +416,48 @@ body {
   height: 280px;
   width: 280px;
   margin: 15px;
-  background-color: #000;
-  text-decoration-color: white;
+  /*background-color: #000;*/
+  position: relative;
+}
+
+.overlay {
+  color: white;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay div img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+
+.overlay-likes {
+  margin-right: 20px;
+}
+
+.overlay-comments {
+  margin-left: 20px;
 }
 
 .profile-item {
   height: 280px;
   width: 280px;
   object-fit: contain;
-  /*position: absolute;*/
+  position: absolute;
 }
 
-.profile-item:hover {
-  opacity:0.5;
-  /*display: block;*/
+.overlay:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
-/*.overlay:hover {
-  visibility: visible;
-}*/
 
 .post-show .item {
   margin: 0 auto 20px auto;
