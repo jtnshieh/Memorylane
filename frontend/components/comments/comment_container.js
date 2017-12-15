@@ -5,13 +5,12 @@ import { fetchPost } from '../../actions/post_actions';
 import { allPosts, allComments } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
-  let x = {
+  return {
     comments: allComments(state),
     posts: allPosts(state),
     post: ownProps.post,
     session: state.session
   };
-  return x;
 };
 
 
