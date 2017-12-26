@@ -1,9 +1,4 @@
 class Api::LikesController < ApplicationController
-  # def index
-  #   @likes = Like.find_by_post_id(params[:post_id])
-  #   render "api/likes/index"
-  # end
-
   def create
     @like = Like.new(like_params)
     @post = @like.post
