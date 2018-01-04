@@ -43,6 +43,7 @@ class Comments extends React.Component{
       });
     });
 
+
     return (
       <div>
         <ul className="post-comments-list">
